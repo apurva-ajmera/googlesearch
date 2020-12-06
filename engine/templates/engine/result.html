@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <div class="" style="margin:auto;max-width:850px;height:auto">
+      {% for key,title in dictionary.items %}
+        {% for t,value in title.items %}
+          <a href='{{key}}' style="font-size:25px;">{{t}}</a>
+          <div class="" style="height: 90px;overflow:hidden;margin-top:10px">
+            {{value}}
+          </div>
+          <br>
+          &nbsp;
+          <br>
+        {% endfor %}
+      {% endfor %}
+    </div>
+  </body>
+</html>

@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport"/>
+  <meta content="v3q8LZAdrEXypO7j1VhR0UKBHYmsgbg-6K0SjxVRbJE" name="google-site-verification"/>
+  <!-- Bootstrap CSS -->
+  <link crossorigin="anonymous" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" rel="stylesheet"/>
+  <meta charset="utf-8"/>
+  <link href="/static/blog/main.css" rel="stylesheet" type="text/css"/>
+  <style media="screen">
+   .hljs{display:block;width:auto;clear:both;overflow-x:auto;padding:.5em;background:#F0F0F0}.hljs,.hljs-subst{color:#444}.hljs-comment{color:#888888}.hljs-keyword,.hljs-attribute,.hljs-selector-tag,.hljs-meta-keyword,.hljs-doctag,.hljs-name{font-weight:bold}.hljs-type,.hljs-string,.hljs-number,.hljs-selector-id,.hljs-selector-class,.hljs-quote,.hljs-template-tag,.hljs-deletion{color:#880000}.hljs-title,.hljs-section{color:#880000;font-weight:bold}.hljs-regexp,.hljs-symbol,.hljs-variable,.hljs-template-variable,.hljs-link,.hljs-selector-attr,.hljs-selector-pseudo{color:#BC6060}.hljs-literal{color:#78A960}.hljs-built_in,.hljs-bullet,.hljs-code,.hljs-addition{color:#397300}.hljs-meta{color:#1f7199}.hljs-meta-string{color:#4d99bf}.hljs-emphasis{font-style:italic}.hljs-strong{font-weight:bold}
+  </style>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js">
+  </script>
+  <script>
+   hljs.initHighlightingOnLoad();
+  </script>
+  <title>
+   CodeStorm
+  </title>
+ </head>
+ <body>
+  <header class="site-header">
+   <nav class="navbar navbar-expand-md navbar-dark bg-steel fixed-top">
+    <div class="container">
+     <a class="navbar-brand mr-4" href="/">
+      CodeStorm
+     </a>
+     <button aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-target="#navbarToggle" data-toggle="collapse" type="button">
+      <span class="navbar-toggler-icon">
+      </span>
+     </button>
+     <div class="collapse navbar-collapse" id="navbarToggle">
+      <div class="navbar-nav mr-auto">
+       <a class="nav-item nav-link" href="/">
+        Home
+       </a>
+       <a class="nav-item nav-link" href="/codestorm-about">
+        About
+       </a>
+       <a class="nav-item nav-link" href="/data-structure-algorithm/topics/">
+        Topics
+       </a>
+      </div>
+      <!-- Navbar Right Side -->
+      <div class="navbar-nav">
+       <a class="nav-item nav-link" href="/login/">
+        Login
+       </a>
+       <a class="nav-item nav-link" href="/register/">
+        Register
+       </a>
+      </div>
+     </div>
+    </div>
+   </nav>
+  </header>
+  <main class="container" role="main">
+   <div class="row">
+    <div class="col-md-8">
+     <article class="content-section">
+      <div class="">
+       <div class="article-metadata">
+        <a class="mr-2" href="#">
+         apurva
+        </a>
+       </div>
+       <h2>
+        <a class="article-title" href="/arrays-data-structure/">
+         Arrays Data Structure
+        </a>
+       </h2>
+       <p style="text-align:justify">
+        <span style="font-size:16px">
+         Array is a linear data structure.In array we can randomly access any value,you might think how is that possible?The reason behind  is the array stored in main memory in contigous manner.Array store homogeneous data meaans if you initialize array with integer data type it can store inly integer data.
+        </span>
+       </p>
+       <p style="text-align:justify">
+        <span style="font-size:16px">
+         In array,you can perform random access.The truth behind for random access is that array use base address and index pointer.Now we discuss what is base address and index pointer.Base address of an array is the address of first element address of an array in main memory.index pointer means at which position you want to access an element.
+        </span>
+       </p>
+       <p style="text-align:justify">
+        <span style="font-size:16px">
+         Let's take an example,you declare an array of size 10.You have to remember it that first index of an array is 0.When you initialize array of size 10 the range of array's index is 0-9.Initialization means you give the size of an array,in this example the size of an array is 10 and range 0-9 means array's  first position is 0 and last position is 9.Assume that each element of an array is 1 byte so total array size is 10 byte.For accessing an element you have to perform just one operation and this operation is given below.
+        </span>
+       </p>
+       <p style="text-align:justify">
+        <strong>
+         <span style="font-size:16px">
+          Base address + Index pointer
+         </span>
+        </strong>
+        <span style="font-size:16px">
+         .
+        </span>
+       </p>
+       <p style="text-align:justify">
+        <span style="font-size:16px">
+         If you want to access an element at position 5 then take base address of an array and add index pointer.Assume that base address is 2000 and here index pointer is 4 because we want to access an element at position 5 and our starting index is 0 so we subtract 1 from its position.Note that we take position 5 not index if we want access an element at index 5 so we can not perform any subtraction operation.so now our result is 2000+4 = 2004.So, at 2004 memory location fifth postion of an array is present.In case of an index we just add the index and it's base address means if we want to find address of fifth index then the address is 2005(2000+5).
+        </span>
+       </p>
+       <table align="center" border="1" cellpadding="1" cellspacing="1" style="width:500px">
+        <tbody>
+         <tr>
+          <td>
+           100
+          </td>
+          <td>
+           200
+          </td>
+          <td>
+           300
+          </td>
+          <td>
+           400
+          </td>
+          <td>
+           500
+          </td>
+          <td>
+           600
+          </td>
+          <td>
+           700
+          </td>
+          <td>
+           800
+          </td>
+          <td>
+           900
+          </td>
+          <td>
+           1000
+          </td>
+         </tr>
+        </tbody>
+       </table>
+       <p>
+        <span style="font-size:16px">
+         As we can see in above example array starts at 2000 and last address of an array is 2009.Now we discuss how to initialize it,implement it and use it.
+        </span>
+        <br/>
+        <span style="font-size:16px">
+         <strong>
+          Initialization of an array
+         </strong>
+         :-
+        </span>
+        <span style="font-size:16px">
+         int a[n];   //where n is the size of an array
+        </span>
+       </p>
+       <p>
+        <span style="font-size:16px">
+         <strong>
+          Acceessing array elements:-
+         </strong>
+         cout&lt;&lt;a[5]; //acceessing an element at index 5.
+        </span>
+       </p>
+       <p>
+        <span style="font-size:16px">
+         Below is the example of one dimensional array.
+        </span>
+       </p>
+       <p>
+        <span style="font-size:16px">
+         code of an array:-
+        </span>
+       </p>
+       <pre>
+<code class="language-cpp">#include&lt;iostream&gt;
+using namespace std;
+
+int main()
+{
+    int n,num;
+    cout&lt;&lt;"what is the size of an array:";
+    cin&gt;&gt;n;
+    int a[n];
+    for(int i=0;i&lt;n;i++)
+    {
+         cin&gt;&gt;num; //take input from the user
+         a[i] = num;
+    }
+    //print an array
+    for(int j=0;j&lt;n;j++)
+    {
+         cout&lt;&lt;a[j]&lt;&lt;" ";
+    }
+}</code></pre>
+       <p>
+       </p>
+      </div>
+     </article>
+     <article class="content-section">
+      <div class="">
+       <div class="article-metadata">
+        <a class="mr-2" href="#">
+         apurva
+        </a>
+       </div>
+       <h2>
+        <a class="article-title" href="/multidimensional-array-data-structure/">
+         Multidimensional  Array Data Structure
+        </a>
+       </h2>
+       <p style="text-align:justify">
+        <span style="font-size:16px">
+         In previous article we have seen that what is one dimensional array.One dimentional array means you  have only one row but in real scenario you might need more than one dimension for array.So,in this article we see what is multidimensional array.
+        </span>
+       </p>
+       <p style="text-align:justify">
+        <span style="font-size:16px">
+         Multidimensional means you have more than one row or column.Means when you require mulitple rows or column you have to use multidimensional array.Let's take an example you want to represent a matrix so you need more than one column and row.Assume you want to represent 3 by 3 matrix so that you need 3 rows and 3 columns.Before jump into actual code we start from how to initialize multidimensional array.
+        </span>
+       </p>
+       <pre>
+<code class="language-cpp">int a[r][c];  //r stands for row and c stands for column
+int a[3][3];  //this array have 3 rows and 3 columns
+int a[3][2];  //this array have 3 rows and 2 columns</code></pre>
+       <p style="text-align:justify">
+        <span style="font-size:16px">
+         As above we can see what initialization of multidimensional array looks like.Now we see how we can take input from the user and place int it's position.Here we need 3 by 3 matrix so  we need two for loops.You might think why we require two for loops.First for loop is for traversing in row and second for loop for traversing in column.Still you have confusion don't worry just see below figure:
+        </span>
+       </p>
+       <pre>
+<code class="language-cpp">  0     1    2   //0,1,2 is row and column index
+0[00   01   03]
+1[10   11   12]
+2[20   21   22]</code></pre>
+       <p style="text-align:justify">
+        <span style="font-size:16px">
+         Array starting from 0 so when we initialize it with for loop it start with 0 but it is not compulsory you can start from index 1 but in this case we start from index 0.So you can see that outside of rectangular bracket i write indexes of array and in bracket i write down its position.First position is 00 because at that place row oindex is zero and column index is zero now row index remain 0 becuase inner loop still executing therefore column index is increasing by one so next position is 01 the 02 and so on.Let's look at code:-
+        </span>
+       </p>
+       <pre>
+<code class="language-cpp">int a[3][3];//initialization of an array
+int num; //for taking an input
+
+//first for loop for row
+for(int i=0;i&lt;3;i++)
+{
+ //inner for loop for column
+    for(int j=0;j&lt;3;j++)
+    {
+         cin&gt;&gt;num;
+         a[i][j] = num;
+    }
+}</code></pre>
+       <p style="text-align:justify">
+        <strong>
+         <span style="font-size:16px">
+          You think how it works so let's decode it:-
+         </span>
+        </strong>
+       </p>
+       <pre>
+<code class="language-cpp">first outer query run so,
+for i=0:
+     for j=0;{execute code} then j++ then check condition
+     now j=1 and condition is j&lt;3(condition is true)
+   
+     for j=1;{execute code} then j++ then check condition
+     now j=2 and condition is j&lt;3(condition is true)
+
+     for j=2;{execute code} then j++ then check condition
+     now j=3 and condition is j&lt;3(condition is false)
+
+now it is increment the outer loop variable which is i,so now i=1
+
+for i=1:
+     for j=0;{execute code} then j++ then check condition
+     now j=1 and condition is j&lt;3(condition is true)
+   
+     for j=1;{execute code} then j++ then check condition
+     now j=2 and condition is j&lt;3(condition is true)
+
+     for j=2;{execute code} then j++ then check condition
+     now j=3 and condition is j&lt;3(condition is false)
+
+now it is increment the outer loop variable which is i,so now i=2
+
+for i=2:
+     for j=0;{execute code} then j++ then check condition
+     now j=1 and condition is j&lt;3(condition is true)
+   
+     for j=1;{execute code} then j++ then check condition
+     now j=2 and condition is j&lt;3(condition is true)
+
+     for j=2;{execute code} then j++ then check condition
+     now j=3 and condition is j&lt;3(condition is false)
+
+now it is increment the value of i so now i=3 hence condition is false(i&lt;3)
+
+so now program outside of the for loop</code></pre>
+       <p style="text-align:justify">
+       </p>
+       <p style="text-align:justify">
+        <span style="font-size:16px">
+         That is the basic implementation of multidimensional array.We see in first part that how we can initialize the array,in second part we see how we can use array to represent a matrix,and now this is time to implement the whole code.
+        </span>
+       </p>
+       <p style="text-align:justify">
+        <strong>
+         <span style="font-size:16px">
+          Below is the implementation of an array:-
+         </span>
+        </strong>
+       </p>
+       <pre>
+<code class="language-cpp">#include&lt;iostream&gt;
+using namespace std;
+
+int main()
+{
+  int a[3][3];  //intializtion of matirx
+  int num;
+
+  for(int i=0;i&lt;3;i++)
+  {
+    for(int j=0;j&lt;3;j++)
+    {
+      cin&gt;&gt;num;
+      a[i][j] = num;
+    }
+  }
+
+  //print matrix
+  for(int i=0;i&lt;3;i++)
+  {
+    for(int j=0;j&lt;3;j++)
+    {
+      cout&lt;&lt;a[i][j]&lt;&lt;" ";
+    }
+    cout&lt;&lt;endl;
+  }
+}</code></pre>
+       <p>
+       </p>
+      </div>
+     </article>
+     <a class="btn btn-outline-info mb-4" href="?page=1">
+      First
+     </a>
+     <a class="btn btn-outline-info mb-4" href="?page=1">
+      Previous
+     </a>
+     <a class="btn btn-outline-info mb-4" href="?page=1">
+      1
+     </a>
+     <a class="btn btn-info mb-4" href="?page=2">
+      2
+     </a>
+     <a class="btn btn-outline-info mb-4" href="?page=3">
+      3
+     </a>
+     <a class="btn btn-outline-info mb-4" href="?page=4">
+      4
+     </a>
+     <a class="btn btn-outline-info mb-4" href="?page=3">
+      Next
+     </a>
+     <a class="btn btn-outline-info mb-4" href="?page=25">
+      Last
+     </a>
+     <script type="text/javascript">
+      var image = document.getElementsByTagName('img');
+     </script>
+    </div>
+    <div class="col-md-4">
+     <div class="content-section">
+      <h3>
+       Information
+      </h3>
+      <p class="text-muted">
+       You can put any information here you'd like.
+      </p>
+      <ul class="list-group">
+       <li class="list-group-item list-group-item-light">
+        Latest Posts
+       </li>
+       <li class="list-group-item list-group-item-light">
+        Announcements
+       </li>
+       <li class="list-group-item list-group-item-light">
+        Calendars
+       </li>
+       <li class="list-group-item list-group-item-light">
+        etc
+       </li>
+      </ul>
+     </div>
+    </div>
+   </div>
+  </main>
+  <script crossorigin="anonymous" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" src="https://code.jquery.com/jquery-3.3.1.slim.min.js">
+  </script>
+  <script crossorigin="anonymous" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js">
+  </script>
+  <script crossorigin="anonymous" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js">
+  </script>
+ </body>
+ <footer>
+  <center>
+   <h4 style="color:#00ffff">
+    CodeStrom
+   </h4>
+   <p>
+    <small style="size:26px;color:red">
+     NOTE:-
+    </small>
+    <small style="size:22px;color:yellow">
+     This is website is under development if you find any query then
+     <a href="/contact-admin/">
+      contact
+     </a>
+     here.
+    </small>
+   </p>
+  </center>
+ </footer>
+</html>

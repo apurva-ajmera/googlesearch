@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport"/>
+  <meta content="v3q8LZAdrEXypO7j1VhR0UKBHYmsgbg-6K0SjxVRbJE" name="google-site-verification"/>
+  <!-- Bootstrap CSS -->
+  <link crossorigin="anonymous" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" rel="stylesheet"/>
+  <meta charset="utf-8"/>
+  <link href="/static/blog/main.css" rel="stylesheet" type="text/css"/>
+  <style media="screen">
+   .hljs{display:block;width:auto;clear:both;overflow-x:auto;padding:.5em;background:#F0F0F0}.hljs,.hljs-subst{color:#444}.hljs-comment{color:#888888}.hljs-keyword,.hljs-attribute,.hljs-selector-tag,.hljs-meta-keyword,.hljs-doctag,.hljs-name{font-weight:bold}.hljs-type,.hljs-string,.hljs-number,.hljs-selector-id,.hljs-selector-class,.hljs-quote,.hljs-template-tag,.hljs-deletion{color:#880000}.hljs-title,.hljs-section{color:#880000;font-weight:bold}.hljs-regexp,.hljs-symbol,.hljs-variable,.hljs-template-variable,.hljs-link,.hljs-selector-attr,.hljs-selector-pseudo{color:#BC6060}.hljs-literal{color:#78A960}.hljs-built_in,.hljs-bullet,.hljs-code,.hljs-addition{color:#397300}.hljs-meta{color:#1f7199}.hljs-meta-string{color:#4d99bf}.hljs-emphasis{font-style:italic}.hljs-strong{font-weight:bold}
+  </style>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js">
+  </script>
+  <script>
+   hljs.initHighlightingOnLoad();
+  </script>
+  <title>
+   CodeStorm
+  </title>
+ </head>
+ <body>
+  <header class="site-header">
+   <nav class="navbar navbar-expand-md navbar-dark bg-steel fixed-top">
+    <div class="container">
+     <a class="navbar-brand mr-4" href="/">
+      CodeStorm
+     </a>
+     <button aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-target="#navbarToggle" data-toggle="collapse" type="button">
+      <span class="navbar-toggler-icon">
+      </span>
+     </button>
+     <div class="collapse navbar-collapse" id="navbarToggle">
+      <div class="navbar-nav mr-auto">
+       <a class="nav-item nav-link" href="/">
+        Home
+       </a>
+       <a class="nav-item nav-link" href="/codestorm-about">
+        About
+       </a>
+       <a class="nav-item nav-link" href="/data-structure-algorithm/topics/">
+        Topics
+       </a>
+      </div>
+      <!-- Navbar Right Side -->
+      <div class="navbar-nav">
+       <a class="nav-item nav-link" href="/login/">
+        Login
+       </a>
+       <a class="nav-item nav-link" href="/register/">
+        Register
+       </a>
+      </div>
+     </div>
+    </div>
+   </nav>
+  </header>
+  <main class="container" role="main">
+   <div class="row">
+    <div class="col-md-8">
+     <article class="content-section">
+      <div class="">
+       <div class="article-metadata">
+        <a class="mr-2" href="#">
+         apurva
+        </a>
+       </div>
+       <h2>
+        <a class="article-title" href="/obtain-address-of-element-of-array/">
+         Obtain address of element of array
+        </a>
+       </h2>
+       <p style="text-align:justify">
+        <span style="font-size:16px">
+         In computing,
+         <strong>
+          row-major order
+         </strong>
+         and
+         <strong>
+          column-major
+         </strong>
+         order are methods for
+         <strong>
+         </strong>
+         storing multidimensional array in lenear storage such as random access memory.
+        </span>
+       </p>
+       <p style="text-align:justify">
+        <span style="font-size:16px">
+         The difference between the orders lies in which elements of an array are contiguous in memory. In row-major order, the consecutive elements of a row reside next to each other, whereas the same holds true for consecutive elements of a column in column-major order. While the terms allude to the rows and columns of a two-dimensional array, i.e. a
+         <strong>
+          matrix
+         </strong>
+         , the orders can be generalized to arrays of any dimension by noting that the terms row-major and column-major are equivalent to lexicographic and colexicographic orders, respectively.
+         <strong>
+          By default it is a row major
+         </strong>
+         .
+        </span>
+       </p>
+       <p style="text-align:justify">
+        <span style="font-size:16px">
+         We konw that for finding an address of an element of single dimensional array is to to add base address and it's index pointer but for multidimensional array there is some steps which you have to follow.Let's take an example,
+        </span>
+       </p>
+       <p style="text-align:justify">
+        <span style="font-size:16px">
+         int a[i1][i2][i3][i4][i5].........[in];
+        </span>
+       </p>
+       <p style="text-align:justify">
+        <span style="font-size:16px">
+         As above you can see that array name 'a' have multiple dimension which is i1,i2,i3,....in and now assume that you have given to find address of particular element.Assume that you to given particular element for finding an address see below example.
+        </span>
+       </p>
+       <p style="text-align:justify">
+        <strong>
+         <span style="font-size:16px">
+          find address of a[r1][r2][r3][r4][r5].......[rn]?
+         </span>
+        </strong>
+       </p>
+       <p style="text-align:justify">
+        <span style="font-size:16px">
+         So for finding address of element of array you have to follow below steps(we use row major):
+        </span>
+       </p>
+       <p style="text-align:justify">
+        <span style="font-size:16px">
+         address of a[r1][r2][r3][r4][r5].......[rn] = base address+(r1*i2*i3....*in  +
+        </span>
+       </p>
+       <p style="text-align:justify">
+        <span style="font-size:16px">
+         r2*i3*i4....in    +
+        </span>
+       </p>
+       <p style="text-align:justify">
+        <span style="font-size:16px">
+         r3*i4*i5....in    +
+        </span>
+       </p>
+       <p style="text-align:justify">
+        <span style="font-size:16px">
+         .................    +
+        </span>
+       </p>
+       <p style="text-align:justify">
+        <span style="font-size:16px">
+         rn-1*in + rn)*sizeof(int)
+        </span>
+       </p>
+       <p style="text-align:justify">
+        <span style="font-size:16px">
+         Here,we are using sizeof(int) because we intialize that array element is integer,if it is float then use sizeof(float) instead sizeof(int).You think how it works let's see below illustration:
+        </span>
+       </p>
+       <pre>
+<code class="language-cpp">int a[3][4];
+find address of a[2][3]?</code></pre>
+       <p style="text-align:justify">
+        <span style="font-size:16px">
+         Here array contain three rows and four columns and you have to find out address of an element which present at third row of fourth column(array's starting index is 0).For finding address we use above equation:
+        </span>
+       </p>
+       <pre>
+<code class="language-cpp">address of a[2][3] = base adress + (r1*i2 + r2)*sizeof(int)
+{assume that base address is 1000 and sizeof(int) is 4 byte}
+
+address of a[2][3] = 1000 + ((2*4)+3) * 4
+                             = 1000 + 44
+                             = 1044
+
+so the answer is 1044.</code></pre>
+       <p style="text-align:justify">
+        <strong>
+         <span style="font-size:16px">
+          find address of a[r1][r2][r3][r4][r5].......[rn]?
+         </span>
+        </strong>
+       </p>
+       <p style="text-align:justify">
+        <span style="font-size:16px">
+         So for finding address of element of array you have to follow below steps(we use column major):
+        </span>
+       </p>
+       <p style="text-align:justify">
+       </p>
+       <p style="text-align:justify">
+        <span style="font-size:16px">
+         address of a[r1][r2][r3][r4][r5].......[rn] = base address+(rn*in-1*in-2....*i1  +
+        </span>
+       </p>
+       <p style="text-align:justify">
+        <span style="font-size:16px">
+         rn-1*in-2*in-3....i1 +
+        </span>
+       </p>
+       <p style="text-align:justify">
+        <span style="font-size:16px">
+         rn-2*in-3*in-4....i1 +
+        </span>
+       </p>
+       <p style="text-align:justify">
+        <span style="font-size:16px">
+         .................           +
+        </span>
+       </p>
+       <p style="text-align:justify">
+        <span style="font-size:16px">
+         r1*i1 + rn)*sizeof(int)
+        </span>
+       </p>
+       <pre>
+<code class="language-cpp">int a[3][4];
+find address of a[2][3]?(using column major)</code></pre>
+       <p>
+        <span style="font-size:16px">
+         So now we have to use column major so we use above equation:
+        </span>
+       </p>
+       <pre>
+<code class="language-cpp">address of a[2][3] = base address + (r2*i1 + r1)*sizeof(int)
+{assume that base address is 1000 and sizeof(int) is 4.
+
+address of a[2][3] = 1000 + (3*3 +2)*4
+                             = 1044
+
+answer is 1044.</code></pre>
+       <p>
+       </p>
+      </div>
+     </article>
+     <article class="content-section">
+      <div class="">
+       <div class="article-metadata">
+        <a class="mr-2" href="#">
+         apurva
+        </a>
+       </div>
+       <h2>
+        <a class="article-title" href="/stack-data-structure/">
+         Stack Data Structure
+        </a>
+       </h2>
+       <p style="text-align:justify">
+        <span style="font-size:16px">
+         A stack is a simple data structure used for storing data.In a stack, the order in which the data arrives is important.A pile of plates in a cafeteria is a good example of a stack. The plates are added to the stack as they are cleaned and they are placed on the top.When a plate, is required it is taken from the top of the stack.The first plate placed on the stack is the last one to be used.
+        </span>
+       </p>
+       <p style="text-align:justify">
+        <span style="font-size:16px">
+         <strong>
+          Definition:
+         </strong>
+         A stack is an ordered list in which insertion and deletion are done at one end, called top. The last element inserted is the first one to be deleted.Hence, it is called the
+         <strong>
+          Last in First out (LIFO)
+         </strong>
+         or
+         <strong>
+          First in Last out (FILO) list.
+         </strong>
+        </span>
+       </p>
+       <p style="text-align:justify">
+        <span style="font-size:16px">
+         Special names are given to the two changes that can be made to a stack. When an element is inserted in a stack,the concept is called push,and when an element is removed from the stack, the concept is called pop.Trying to pop out an empty stack is called
+         <strong>
+          underflow
+         </strong>
+         and trying to push an element in a full stack is called
+         <strong>
+          overflow
+         </strong>
+         . Generally, we treat them as exceptions.
+        </span>
+       </p>
+       <p style="text-align:justify">
+        <span style="font-size:16px">
+         Example:
+        </span>
+       </p>
+       <p style="text-align:justify">
+        <span style="font-size:16px">
+         <img alt="Image of stack" src="/media/uploads/2020/03/17/stack-image.png"/>
+        </span>
+       </p>
+       <p style="text-align:justify">
+        <strong>
+         <span style="font-size:16px">
+          How Stacks are used:
+         </span>
+        </strong>
+       </p>
+       <p style="text-align:justify">
+        <span style="font-size:16px">
+         Consider a working day in the office. Let us assume a developer is working on a long-term project. The manager then gives the developer a new task which is more important. Thedeveloper puts the long-term project aside and begins work on the new task. The phone rings, and this is the highest priority as it must be answered immediately. The developer pushes the present task into the pending tray and answers the phone.
+        </span>
+       </p>
+       <p style="text-align:justify">
+        <span style="font-size:16px">
+         When the call is complete the task that was abandoned to answer the phone is retrieved from the pending tray and work progresses. To take another call, it may have to be handled in the same manner, but eventually the new task will be finished, and the developer can draw the long-term project from the pending tray and continue with that.
+        </span>
+       </p>
+       <p style="text-align:justify">
+        <span style="font-size:16px">
+         <strong>
+          Direct applications:-
+         </strong>
+         <br/>
+         • Balancing of symbols
+         <br/>
+         • Infix-to-postfix conversion
+         <br/>
+         • Evaluation of postfix expression
+         <br/>
+         • Implementing function calls (including recursion)
+         <br/>
+         • Page-visited history in a Web browser [Back Buttons]
+         <br/>
+         • Undo sequence in a text editor
+         <br/>
+         • Matching Tags in HTML and XML
+         <br/>
+         <strong>
+          Indirect applications:-
+         </strong>
+         <br/>
+         • Auxiliary data structure for other algorithms (Example: Tree traversal algorithms)
+         <br/>
+         • Component of other data structures (Example: Simulating queues)
+        </span>
+       </p>
+      </div>
+     </article>
+     <a class="btn btn-outline-info mb-4" href="?page=1">
+      First
+     </a>
+     <a class="btn btn-outline-info mb-4" href="?page=2">
+      Previous
+     </a>
+     <a class="btn btn-outline-info mb-4" href="?page=1">
+      1
+     </a>
+     <a class="btn btn-outline-info mb-4" href="?page=2">
+      2
+     </a>
+     <a class="btn btn-info mb-4" href="?page=3">
+      3
+     </a>
+     <a class="btn btn-outline-info mb-4" href="?page=4">
+      4
+     </a>
+     <a class="btn btn-outline-info mb-4" href="?page=5">
+      5
+     </a>
+     <a class="btn btn-outline-info mb-4" href="?page=4">
+      Next
+     </a>
+     <a class="btn btn-outline-info mb-4" href="?page=25">
+      Last
+     </a>
+     <script type="text/javascript">
+      var image = document.getElementsByTagName('img');
+     </script>
+    </div>
+    <div class="col-md-4">
+     <div class="content-section">
+      <h3>
+       Information
+      </h3>
+      <p class="text-muted">
+       You can put any information here you'd like.
+      </p>
+      <ul class="list-group">
+       <li class="list-group-item list-group-item-light">
+        Latest Posts
+       </li>
+       <li class="list-group-item list-group-item-light">
+        Announcements
+       </li>
+       <li class="list-group-item list-group-item-light">
+        Calendars
+       </li>
+       <li class="list-group-item list-group-item-light">
+        etc
+       </li>
+      </ul>
+     </div>
+    </div>
+   </div>
+  </main>
+  <script crossorigin="anonymous" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" src="https://code.jquery.com/jquery-3.3.1.slim.min.js">
+  </script>
+  <script crossorigin="anonymous" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js">
+  </script>
+  <script crossorigin="anonymous" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js">
+  </script>
+ </body>
+ <footer>
+  <center>
+   <h4 style="color:#00ffff">
+    CodeStrom
+   </h4>
+   <p>
+    <small style="size:26px;color:red">
+     NOTE:-
+    </small>
+    <small style="size:22px;color:yellow">
+     This is website is under development if you find any query then
+     <a href="/contact-admin/">
+      contact
+     </a>
+     here.
+    </small>
+   </p>
+  </center>
+ </footer>
+</html>
