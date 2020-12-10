@@ -36,8 +36,11 @@ def backward_indexing(name, list_of_words):
 		if Backward_Index.objects.filter(data=words).exists():
 			indexes = Backward_Index.objects.filter(data=words)
 			for index in indexes:
-				index.urls = index.urls + ',' + name
-				index.save()
+				if name in index.urls:
+					continue
+				else:
+					index.urls = index.urls + ',' + name
+					index.save()
 
 		else:
 			Backward_Index.objects.create(data=words, urls=name)
